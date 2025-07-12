@@ -1,6 +1,7 @@
 import express from 'express';
-import routerTest from './routerTest.js';
-const app = express()
-app.use("/routerTest", routerTest);
+import router from './src/routes/TaskRouter.js';
+const app = express();
+app.use(express.json());
+app.use("/api", router);
 
 export default app;
